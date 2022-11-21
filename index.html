@@ -8,33 +8,38 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div class="formstyle">
-        <form name ="form1">
-          <input id ="calc" type ="text" name = "answer"> <br> <br>
-          <input type = "button" value = "1" onclick = "form1.answer.value += '1' ">
-          <input type = "button" value = "2" onclick = "form1.answer.value += '2' ">
-          <input type = "button" value = "3" onclick = "form1.answer.value += '3' ">
-           <input type = "button" value = "+" onclick = "form1.answer.value += '+' ">
-          <br> <br>
-          <input type = "button" value = "4" onclick = "form1.answer.value += '4' ">
-          <input type = "button" value = "5" onclick = "form1.answer.value += '5' ">
-          <input type = "button" value = "6" onclick = "form1.answer.value += '6' ">
-          <input type = "button" value = "-" onclick = "form1.answer.value += '-' ">
-          <br> <br>
-          <input type = "button" value = "7" onclick = "form1.answer.value += '7' ">
-          <input type = "button" value = "8" onclick = "form1.answer.value += '8' ">
-          <input type = "button" value = "9" onclick = "form1.answer.value += '9' ">
-          <input type = "button" value = "*" onclick = "form1.answer.value += '*' ">
-          <br> <br>
-          <input type = "button" value = "/" onclick = "form1.answer.value += '/' ">
-          <input type = "button" value = "0" onclick = "form1.answer.value += '0' ">
-          <input type = "button" value = "." onclick = "form1.answer.value += '.' ">
-          <input type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">
-          <br> 
-          <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >
-          <br> 
-        </form>
-        </div>
+    <table class="calculator" >
+        <tr>
+          <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+       
+          <td> <input type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
+        </tr>
+        <tr>
+          <td> <input type="button" value="1" onclick="display('1')" /> </td>
+          <td> <input type="button" value="2" onclick="display('2')" /> </td>
+          <td> <input type="button" value="3" onclick="display('3')" /> </td>
+          <td> <input type="button" value="/" onclick="display('/')" /> </td>
+        </tr>
+        <tr>
+          <td> <input type="button" value="4" onclick="display('4')" /> </td>
+          <td> <input type="button" value="5" onclick="display('5')" /> </td>
+          <td> <input type="button" value="6" onclick="display('6')" /> </td>
+          <td> <input type="button" value="-" onclick="display('-')" /> </td>
+        </tr>
+        <tr>
+          <td> <input type="button" value="7" onclick="display('7')" /> </td>
+          <td> <input type="button" value="8" onclick="display('8')" /> </td>
+          <td> <input type="button" value="9" onclick="display('9')" /> </td>
+          <td> <input type="button" value="+" onclick="display('+')" /> </td>
+        </tr>
+        <tr>
+          <td> <input type="button" value="." onclick="display('.')" /> </td>
+          <td> <input type="button" value="0" onclick="display('0')" /> </td>
+       
+          <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
+          <td> <input type="button" value="*" onclick="display('*')" /> </td>
+        </tr>
+      </table>
     <script src="./js/code.js"></script>
 </body>
 </html>
