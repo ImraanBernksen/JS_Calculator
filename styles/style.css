@@ -21,13 +21,14 @@
 }
 
 #btn {
-    background-color: lime;
+    background-color: aqua;
+    color: black;
 }
 
 input[type=button] {
     font-family: 'Orbitron', sans-serif;
-    background-color: gold;
-    color: black;
+    background-color: blue;
+    color: white;
     border: solid black 0.5px;
     width: 100%;
     border-radius: 5px;
@@ -37,10 +38,11 @@ input[type=button] {
 
 input[type=button]:hover {
     background-color: silver;
+    color: black;
 }
 
 #btn:hover {
-    background-color: gold;
+    background-color: silver;
 }
 
 @media screen (min-width: 150px;) {
